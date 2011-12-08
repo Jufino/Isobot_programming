@@ -1,0 +1,15 @@
+//Isobot programming
+
+//-------------------------------------------------
+
+Small library for control Isobot robot by Atmega
+
+//-------------------------------------------------
+
+Commands are in command.txt
+
+//-------------------------------------------------
+
+This library is compatible with CodeVision
+
+//-------------------------------------------------
