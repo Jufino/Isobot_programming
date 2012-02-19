@@ -1,0 +1,8 @@
+C:\Users\Jufo\Documents\Visual Studio 2008\Projects\Isobot_terminal\Isobot_terminal\bin\Debug\Isobot_terminal.exe
+C:\Users\Jufo\Documents\Visual Studio 2008\Projects\Isobot_terminal\Isobot_terminal\bin\Debug\Isobot_terminal.pdb
+C:\Users\Jufo\Documents\Visual Studio 2008\Projects\Isobot_terminal\Isobot_terminal\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Jufo\Documents\Visual Studio 2008\Projects\Isobot_terminal\Isobot_terminal\obj\Debug\Isobot_terminal.Form1.resources
+C:\Users\Jufo\Documents\Visual Studio 2008\Projects\Isobot_terminal\Isobot_terminal\obj\Debug\Isobot_terminal.Properties.Resources.resources
+C:\Users\Jufo\Documents\Visual Studio 2008\Projects\Isobot_terminal\Isobot_terminal\obj\Debug\Isobot_terminal.csproj.GenerateResource.Cache
+C:\Users\Jufo\Documents\Visual Studio 2008\Projects\Isobot_terminal\Isobot_terminal\obj\Debug\Isobot_terminal.exe
+C:\Users\Jufo\Documents\Visual Studio 2008\Projects\Isobot_terminal\Isobot_terminal\obj\Debug\Isobot_terminal.pdb

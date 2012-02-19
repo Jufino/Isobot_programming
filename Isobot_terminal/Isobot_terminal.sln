@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual C# Express 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Isobot_terminal", "Isobot_terminal\Isobot_terminal.csproj", "{7FB29C6F-458B-4273-92EE-73DDBF942EC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Isobot_terminal", "Isobot_terminal\Isobot_terminal.csproj", "{BFEAF31A-5D7D-44CE-BB5C-941122A6B5CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +9,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7FB29C6F-458B-4273-92EE-73DDBF942EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7FB29C6F-458B-4273-92EE-73DDBF942EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7FB29C6F-458B-4273-92EE-73DDBF942EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7FB29C6F-458B-4273-92EE-73DDBF942EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFEAF31A-5D7D-44CE-BB5C-941122A6B5CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFEAF31A-5D7D-44CE-BB5C-941122A6B5CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFEAF31A-5D7D-44CE-BB5C-941122A6B5CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFEAF31A-5D7D-44CE-BB5C-941122A6B5CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
