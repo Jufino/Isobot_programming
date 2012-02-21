@@ -144,6 +144,34 @@ namespace Isobot_terminal.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap Bez_názvu11 {
+            get {
+                object obj = ResourceManager.GetObject("Bez názvu11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Bez_názvu31 {
+            get {
+                object obj = ResourceManager.GetObject("Bez názvu31", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Bez_názvujj {
+            get {
+                object obj = ResourceManager.GetObject("Bez názvujj", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap kk {
+            get {
+                object obj = ResourceManager.GetObject("kk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap obr_isobot {
             get {
                 object obj = ResourceManager.GetObject("obr_isobot", resourceCulture);

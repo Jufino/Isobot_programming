@@ -31,10 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.command_box = new System.Windows.Forms.ListBox();
             this.Isobot_com = new System.IO.Ports.SerialPort(this.components);
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.Scanning = new System.ComponentModel.BackgroundWorker();
             this.DDRB = new System.Windows.Forms.GroupBox();
-            this.DDRB7 = new System.Windows.Forms.CheckBox();
-            this.DDRB6 = new System.Windows.Forms.CheckBox();
             this.DDRB5 = new System.Windows.Forms.CheckBox();
             this.DDRB4 = new System.Windows.Forms.CheckBox();
             this.DDRB3 = new System.Windows.Forms.CheckBox();
@@ -42,63 +40,62 @@
             this.DDRB1 = new System.Windows.Forms.CheckBox();
             this.DDRB0 = new System.Windows.Forms.CheckBox();
             this.PORTC_PINC = new System.Windows.Forms.GroupBox();
-            this.PINC7 = new System.Windows.Forms.RadioButton();
-            this.PINC6 = new System.Windows.Forms.RadioButton();
-            this.PINC5 = new System.Windows.Forms.RadioButton();
-            this.PINC4 = new System.Windows.Forms.RadioButton();
-            this.PINC3 = new System.Windows.Forms.RadioButton();
-            this.PINC2 = new System.Windows.Forms.RadioButton();
-            this.PINC1 = new System.Windows.Forms.RadioButton();
-            this.PINC0 = new System.Windows.Forms.RadioButton();
-            this.PORTC7 = new System.Windows.Forms.CheckBox();
-            this.PORTC6 = new System.Windows.Forms.CheckBox();
-            this.PORTC5 = new System.Windows.Forms.CheckBox();
-            this.PORTC2 = new System.Windows.Forms.CheckBox();
-            this.PORTC4 = new System.Windows.Forms.CheckBox();
-            this.PORTC3 = new System.Windows.Forms.CheckBox();
             this.PORTC0 = new System.Windows.Forms.CheckBox();
+            this.PINC0 = new System.Windows.Forms.RadioButton();
             this.PORTC1 = new System.Windows.Forms.CheckBox();
-            this.PORTB7 = new System.Windows.Forms.CheckBox();
+            this.PINC1 = new System.Windows.Forms.RadioButton();
+            this.PORTC2 = new System.Windows.Forms.CheckBox();
+            this.PINC2 = new System.Windows.Forms.RadioButton();
+            this.PORTC3 = new System.Windows.Forms.CheckBox();
+            this.PINC3 = new System.Windows.Forms.RadioButton();
+            this.PORTC5 = new System.Windows.Forms.CheckBox();
+            this.PORTC4 = new System.Windows.Forms.CheckBox();
+            this.PINC4 = new System.Windows.Forms.RadioButton();
+            this.PINC5 = new System.Windows.Forms.RadioButton();
             this.PORTB0 = new System.Windows.Forms.CheckBox();
-            this.PORTB6 = new System.Windows.Forms.CheckBox();
             this.PORTB1 = new System.Windows.Forms.CheckBox();
             this.PORTB5 = new System.Windows.Forms.CheckBox();
             this.PORTB2 = new System.Windows.Forms.CheckBox();
             this.PORTB4 = new System.Windows.Forms.CheckBox();
             this.PORTB3 = new System.Windows.Forms.CheckBox();
             this.DDRC = new System.Windows.Forms.GroupBox();
-            this.DDRC7 = new System.Windows.Forms.CheckBox();
             this.DDRC0 = new System.Windows.Forms.CheckBox();
-            this.DDRC6 = new System.Windows.Forms.CheckBox();
             this.DDRC1 = new System.Windows.Forms.CheckBox();
             this.DDRC5 = new System.Windows.Forms.CheckBox();
             this.DDRC2 = new System.Windows.Forms.CheckBox();
             this.DDRC4 = new System.Windows.Forms.CheckBox();
             this.DDRC3 = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.ADC_ON_OFF = new System.Windows.Forms.CheckBox();
+            this.ADC1_radiobutton = new System.Windows.Forms.RadioButton();
+            this.ADC5_radiobutton = new System.Windows.Forms.RadioButton();
+            this.ADC4_radiobutton = new System.Windows.Forms.RadioButton();
+            this.ADC3_radiobutton = new System.Windows.Forms.RadioButton();
+            this.ADC2_radiobutton = new System.Windows.Forms.RadioButton();
+            this.ADC0_radiobutton = new System.Windows.Forms.RadioButton();
+            this.ADC5_box = new System.Windows.Forms.TextBox();
+            this.ADC2_box = new System.Windows.Forms.TextBox();
+            this.ADC3_box = new System.Windows.Forms.TextBox();
+            this.ADC4_box = new System.Windows.Forms.TextBox();
+            this.ADC1_box = new System.Windows.Forms.TextBox();
+            this.ADC0_box = new System.Windows.Forms.TextBox();
             this.PORTB_PINB = new System.Windows.Forms.GroupBox();
-            this.PINB6 = new System.Windows.Forms.RadioButton();
-            this.PINB5 = new System.Windows.Forms.RadioButton();
             this.PINB4 = new System.Windows.Forms.RadioButton();
             this.PINB3 = new System.Windows.Forms.RadioButton();
+            this.PINB5 = new System.Windows.Forms.RadioButton();
             this.PINB2 = new System.Windows.Forms.RadioButton();
             this.PINB1 = new System.Windows.Forms.RadioButton();
             this.PINB0 = new System.Windows.Forms.RadioButton();
-            this.PINB7 = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
+            this.Open_button = new System.Windows.Forms.Button();
+            this.GPIO_refresh = new System.Windows.Forms.Timer(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GPIO_ON_OFF = new System.Windows.Forms.CheckBox();
+            this.ADC_refresh = new System.Windows.Forms.Timer(this.components);
+            this.zdvih_zozadu = new System.Windows.Forms.Button();
+            this.Zdvih_zpredu = new System.Windows.Forms.Button();
+            this.zaklon = new System.Windows.Forms.Button();
+            this.predklon = new System.Windows.Forms.Button();
             this.UP_LEFT = new System.Windows.Forms.Button();
             this.DOWN_LEFT = new System.Windows.Forms.Button();
             this.DOWN_RIGHT = new System.Windows.Forms.Button();
@@ -116,6 +113,7 @@
             this.groupBox5.SuspendLayout();
             this.PORTB_PINB.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -132,229 +130,132 @@
             // 
             this.Isobot_com.BaudRate = 19200;
             // 
-            // backgroundWorker1
+            // Scanning
             // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.Scanning.DoWork += new System.ComponentModel.DoWorkEventHandler(this.scanning);
             // 
             // DDRB
             // 
-            this.DDRB.Controls.Add(this.DDRB7);
-            this.DDRB.Controls.Add(this.DDRB6);
             this.DDRB.Controls.Add(this.DDRB5);
             this.DDRB.Controls.Add(this.DDRB4);
             this.DDRB.Controls.Add(this.DDRB3);
             this.DDRB.Controls.Add(this.DDRB2);
             this.DDRB.Controls.Add(this.DDRB1);
             this.DDRB.Controls.Add(this.DDRB0);
-            this.DDRB.Location = new System.Drawing.Point(12, 244);
+            this.DDRB.Enabled = false;
+            this.DDRB.Location = new System.Drawing.Point(6, 42);
             this.DDRB.Name = "DDRB";
-            this.DDRB.Size = new System.Drawing.Size(94, 120);
+            this.DDRB.Size = new System.Drawing.Size(94, 103);
             this.DDRB.TabIndex = 2;
             this.DDRB.TabStop = false;
             this.DDRB.Text = "DDRB";
             // 
-            // DDRB7
-            // 
-            this.DDRB7.AutoSize = true;
-            this.DDRB7.Location = new System.Drawing.Point(55, 89);
-            this.DDRB7.Name = "DDRB7";
-            this.DDRB7.Size = new System.Drawing.Size(32, 17);
-            this.DDRB7.TabIndex = 0;
-            this.DDRB7.Text = "7";
-            this.DDRB7.UseVisualStyleBackColor = true;
-            this.DDRB7.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
-            // 
-            // DDRB6
-            // 
-            this.DDRB6.AutoSize = true;
-            this.DDRB6.Location = new System.Drawing.Point(55, 66);
-            this.DDRB6.Name = "DDRB6";
-            this.DDRB6.Size = new System.Drawing.Size(32, 17);
-            this.DDRB6.TabIndex = 0;
-            this.DDRB6.Text = "6";
-            this.DDRB6.UseVisualStyleBackColor = true;
-            this.DDRB6.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
-            // 
             // DDRB5
             // 
             this.DDRB5.AutoSize = true;
-            this.DDRB5.Location = new System.Drawing.Point(55, 43);
+            this.DDRB5.Location = new System.Drawing.Point(53, 70);
             this.DDRB5.Name = "DDRB5";
             this.DDRB5.Size = new System.Drawing.Size(32, 17);
             this.DDRB5.TabIndex = 0;
             this.DDRB5.Text = "5";
             this.DDRB5.UseVisualStyleBackColor = true;
-            this.DDRB5.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
+            this.DDRB5.CheckedChanged += new System.EventHandler(this.zmena_DDRB);
             // 
             // DDRB4
             // 
             this.DDRB4.AutoSize = true;
-            this.DDRB4.Location = new System.Drawing.Point(55, 19);
+            this.DDRB4.Location = new System.Drawing.Point(53, 45);
             this.DDRB4.Name = "DDRB4";
             this.DDRB4.Size = new System.Drawing.Size(32, 17);
             this.DDRB4.TabIndex = 0;
             this.DDRB4.Text = "4";
             this.DDRB4.UseVisualStyleBackColor = true;
-            this.DDRB4.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
+            this.DDRB4.CheckedChanged += new System.EventHandler(this.zmena_DDRB);
             // 
             // DDRB3
             // 
             this.DDRB3.AutoSize = true;
-            this.DDRB3.Location = new System.Drawing.Point(6, 89);
+            this.DDRB3.Location = new System.Drawing.Point(53, 20);
             this.DDRB3.Name = "DDRB3";
             this.DDRB3.Size = new System.Drawing.Size(32, 17);
             this.DDRB3.TabIndex = 0;
             this.DDRB3.Text = "3";
             this.DDRB3.UseVisualStyleBackColor = true;
-            this.DDRB3.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
+            this.DDRB3.CheckedChanged += new System.EventHandler(this.zmena_DDRB);
             // 
             // DDRB2
             // 
             this.DDRB2.AutoSize = true;
-            this.DDRB2.Location = new System.Drawing.Point(7, 66);
+            this.DDRB2.Location = new System.Drawing.Point(13, 70);
             this.DDRB2.Name = "DDRB2";
             this.DDRB2.Size = new System.Drawing.Size(32, 17);
             this.DDRB2.TabIndex = 0;
             this.DDRB2.Text = "2";
             this.DDRB2.UseVisualStyleBackColor = true;
-            this.DDRB2.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
+            this.DDRB2.CheckedChanged += new System.EventHandler(this.zmena_DDRB);
             // 
             // DDRB1
             // 
             this.DDRB1.AutoSize = true;
-            this.DDRB1.Location = new System.Drawing.Point(7, 43);
+            this.DDRB1.Location = new System.Drawing.Point(13, 45);
             this.DDRB1.Name = "DDRB1";
             this.DDRB1.Size = new System.Drawing.Size(32, 17);
             this.DDRB1.TabIndex = 0;
             this.DDRB1.Text = "1";
             this.DDRB1.UseVisualStyleBackColor = true;
-            this.DDRB1.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
+            this.DDRB1.CheckedChanged += new System.EventHandler(this.zmena_DDRB);
             // 
             // DDRB0
             // 
             this.DDRB0.AutoSize = true;
-            this.DDRB0.Location = new System.Drawing.Point(7, 20);
+            this.DDRB0.Location = new System.Drawing.Point(13, 20);
             this.DDRB0.Name = "DDRB0";
             this.DDRB0.Size = new System.Drawing.Size(32, 17);
             this.DDRB0.TabIndex = 0;
             this.DDRB0.Text = "0";
             this.DDRB0.UseVisualStyleBackColor = true;
-            this.DDRB0.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
+            this.DDRB0.CheckedChanged += new System.EventHandler(this.zmena_DDRB);
             // 
             // PORTC_PINC
             // 
-            this.PORTC_PINC.Controls.Add(this.PINC7);
-            this.PORTC_PINC.Controls.Add(this.PINC6);
-            this.PORTC_PINC.Controls.Add(this.PINC5);
-            this.PORTC_PINC.Controls.Add(this.PINC4);
-            this.PORTC_PINC.Controls.Add(this.PINC3);
-            this.PORTC_PINC.Controls.Add(this.PINC2);
-            this.PORTC_PINC.Controls.Add(this.PINC1);
-            this.PORTC_PINC.Controls.Add(this.PINC0);
-            this.PORTC_PINC.Controls.Add(this.PORTC7);
-            this.PORTC_PINC.Controls.Add(this.PORTC6);
-            this.PORTC_PINC.Controls.Add(this.PORTC5);
-            this.PORTC_PINC.Controls.Add(this.PORTC2);
-            this.PORTC_PINC.Controls.Add(this.PORTC4);
-            this.PORTC_PINC.Controls.Add(this.PORTC3);
             this.PORTC_PINC.Controls.Add(this.PORTC0);
+            this.PORTC_PINC.Controls.Add(this.PINC0);
             this.PORTC_PINC.Controls.Add(this.PORTC1);
-            this.PORTC_PINC.Location = new System.Drawing.Point(306, 244);
+            this.PORTC_PINC.Controls.Add(this.PINC1);
+            this.PORTC_PINC.Controls.Add(this.PORTC2);
+            this.PORTC_PINC.Controls.Add(this.PINC2);
+            this.PORTC_PINC.Controls.Add(this.PORTC3);
+            this.PORTC_PINC.Controls.Add(this.PINC3);
+            this.PORTC_PINC.Controls.Add(this.PORTC5);
+            this.PORTC_PINC.Controls.Add(this.PORTC4);
+            this.PORTC_PINC.Controls.Add(this.PINC4);
+            this.PORTC_PINC.Controls.Add(this.PINC5);
+            this.PORTC_PINC.Enabled = false;
+            this.PORTC_PINC.Location = new System.Drawing.Point(300, 42);
             this.PORTC_PINC.Name = "PORTC_PINC";
-            this.PORTC_PINC.Size = new System.Drawing.Size(91, 120);
+            this.PORTC_PINC.Size = new System.Drawing.Size(91, 103);
             this.PORTC_PINC.TabIndex = 2;
             this.PORTC_PINC.TabStop = false;
             this.PORTC_PINC.Text = "PORTC/PINC";
             // 
-            // PINC7
+            // PORTC0
             // 
-            this.PINC7.AutoSize = true;
-            this.PINC7.Enabled = false;
-            this.PINC7.Location = new System.Drawing.Point(54, 85);
-            this.PINC7.Name = "PINC7";
-            this.PINC7.Size = new System.Drawing.Size(31, 17);
-            this.PINC7.TabIndex = 0;
-            this.PINC7.TabStop = true;
-            this.PINC7.Text = "7";
-            this.PINC7.UseVisualStyleBackColor = true;
-            // 
-            // PINC6
-            // 
-            this.PINC6.AutoSize = true;
-            this.PINC6.Enabled = false;
-            this.PINC6.Location = new System.Drawing.Point(54, 64);
-            this.PINC6.Name = "PINC6";
-            this.PINC6.Size = new System.Drawing.Size(31, 17);
-            this.PINC6.TabIndex = 0;
-            this.PINC6.TabStop = true;
-            this.PINC6.Text = "6";
-            this.PINC6.UseVisualStyleBackColor = true;
-            // 
-            // PINC5
-            // 
-            this.PINC5.AutoSize = true;
-            this.PINC5.Enabled = false;
-            this.PINC5.Location = new System.Drawing.Point(54, 41);
-            this.PINC5.Name = "PINC5";
-            this.PINC5.Size = new System.Drawing.Size(31, 17);
-            this.PINC5.TabIndex = 0;
-            this.PINC5.TabStop = true;
-            this.PINC5.Text = "5";
-            this.PINC5.UseVisualStyleBackColor = true;
-            // 
-            // PINC4
-            // 
-            this.PINC4.AutoSize = true;
-            this.PINC4.Enabled = false;
-            this.PINC4.Location = new System.Drawing.Point(54, 18);
-            this.PINC4.Name = "PINC4";
-            this.PINC4.Size = new System.Drawing.Size(31, 17);
-            this.PINC4.TabIndex = 0;
-            this.PINC4.TabStop = true;
-            this.PINC4.Text = "4";
-            this.PINC4.UseVisualStyleBackColor = true;
-            // 
-            // PINC3
-            // 
-            this.PINC3.AutoSize = true;
-            this.PINC3.Enabled = false;
-            this.PINC3.Location = new System.Drawing.Point(5, 86);
-            this.PINC3.Name = "PINC3";
-            this.PINC3.Size = new System.Drawing.Size(31, 17);
-            this.PINC3.TabIndex = 0;
-            this.PINC3.TabStop = true;
-            this.PINC3.Text = "3";
-            this.PINC3.UseVisualStyleBackColor = true;
-            // 
-            // PINC2
-            // 
-            this.PINC2.AutoSize = true;
-            this.PINC2.Enabled = false;
-            this.PINC2.Location = new System.Drawing.Point(5, 64);
-            this.PINC2.Name = "PINC2";
-            this.PINC2.Size = new System.Drawing.Size(31, 17);
-            this.PINC2.TabIndex = 0;
-            this.PINC2.TabStop = true;
-            this.PINC2.Text = "2";
-            this.PINC2.UseVisualStyleBackColor = true;
-            // 
-            // PINC1
-            // 
-            this.PINC1.AutoSize = true;
-            this.PINC1.Enabled = false;
-            this.PINC1.Location = new System.Drawing.Point(5, 42);
-            this.PINC1.Name = "PINC1";
-            this.PINC1.Size = new System.Drawing.Size(31, 17);
-            this.PINC1.TabIndex = 0;
-            this.PINC1.TabStop = true;
-            this.PINC1.Text = "1";
-            this.PINC1.UseVisualStyleBackColor = true;
+            this.PORTC0.AutoSize = true;
+            this.PORTC0.Location = new System.Drawing.Point(10, 20);
+            this.PORTC0.Name = "PORTC0";
+            this.PORTC0.Size = new System.Drawing.Size(32, 17);
+            this.PORTC0.TabIndex = 0;
+            this.PORTC0.Text = "0";
+            this.PORTC0.UseVisualStyleBackColor = true;
+            this.PORTC0.Visible = false;
+            this.PORTC0.CheckedChanged += new System.EventHandler(this.zmena_PORTC);
             // 
             // PINC0
             // 
+            this.PINC0.AutoCheck = false;
             this.PINC0.AutoSize = true;
             this.PINC0.Enabled = false;
-            this.PINC0.Location = new System.Drawing.Point(5, 17);
+            this.PINC0.Location = new System.Drawing.Point(10, 20);
             this.PINC0.Name = "PINC0";
             this.PINC0.Size = new System.Drawing.Size(31, 17);
             this.PINC0.TabIndex = 0;
@@ -362,109 +263,135 @@
             this.PINC0.Text = "0";
             this.PINC0.UseVisualStyleBackColor = true;
             // 
-            // PORTC7
-            // 
-            this.PORTC7.AutoSize = true;
-            this.PORTC7.Location = new System.Drawing.Point(54, 88);
-            this.PORTC7.Name = "PORTC7";
-            this.PORTC7.Size = new System.Drawing.Size(32, 17);
-            this.PORTC7.TabIndex = 0;
-            this.PORTC7.Text = "7";
-            this.PORTC7.UseVisualStyleBackColor = true;
-            this.PORTC7.Visible = false;
-            // 
-            // PORTC6
-            // 
-            this.PORTC6.AutoSize = true;
-            this.PORTC6.Location = new System.Drawing.Point(54, 65);
-            this.PORTC6.Name = "PORTC6";
-            this.PORTC6.Size = new System.Drawing.Size(32, 17);
-            this.PORTC6.TabIndex = 0;
-            this.PORTC6.Text = "6";
-            this.PORTC6.UseVisualStyleBackColor = true;
-            this.PORTC6.Visible = false;
-            // 
-            // PORTC5
-            // 
-            this.PORTC5.AutoSize = true;
-            this.PORTC5.Location = new System.Drawing.Point(54, 42);
-            this.PORTC5.Name = "PORTC5";
-            this.PORTC5.Size = new System.Drawing.Size(32, 17);
-            this.PORTC5.TabIndex = 0;
-            this.PORTC5.Text = "5";
-            this.PORTC5.UseVisualStyleBackColor = true;
-            this.PORTC5.Visible = false;
-            // 
-            // PORTC2
-            // 
-            this.PORTC2.AutoSize = true;
-            this.PORTC2.Location = new System.Drawing.Point(6, 65);
-            this.PORTC2.Name = "PORTC2";
-            this.PORTC2.Size = new System.Drawing.Size(32, 17);
-            this.PORTC2.TabIndex = 0;
-            this.PORTC2.Text = "2";
-            this.PORTC2.UseVisualStyleBackColor = true;
-            this.PORTC2.Visible = false;
-            // 
-            // PORTC4
-            // 
-            this.PORTC4.AutoSize = true;
-            this.PORTC4.Location = new System.Drawing.Point(54, 18);
-            this.PORTC4.Name = "PORTC4";
-            this.PORTC4.Size = new System.Drawing.Size(32, 17);
-            this.PORTC4.TabIndex = 0;
-            this.PORTC4.Text = "4";
-            this.PORTC4.UseVisualStyleBackColor = true;
-            this.PORTC4.Visible = false;
-            // 
-            // PORTC3
-            // 
-            this.PORTC3.AutoSize = true;
-            this.PORTC3.Location = new System.Drawing.Point(5, 88);
-            this.PORTC3.Name = "PORTC3";
-            this.PORTC3.Size = new System.Drawing.Size(32, 17);
-            this.PORTC3.TabIndex = 0;
-            this.PORTC3.Text = "3";
-            this.PORTC3.UseVisualStyleBackColor = true;
-            this.PORTC3.Visible = false;
-            // 
-            // PORTC0
-            // 
-            this.PORTC0.AutoSize = true;
-            this.PORTC0.Location = new System.Drawing.Point(6, 19);
-            this.PORTC0.Name = "PORTC0";
-            this.PORTC0.Size = new System.Drawing.Size(32, 17);
-            this.PORTC0.TabIndex = 0;
-            this.PORTC0.Text = "0";
-            this.PORTC0.UseVisualStyleBackColor = true;
-            this.PORTC0.Visible = false;
-            // 
             // PORTC1
             // 
             this.PORTC1.AutoSize = true;
-            this.PORTC1.Location = new System.Drawing.Point(6, 42);
+            this.PORTC1.Location = new System.Drawing.Point(10, 45);
             this.PORTC1.Name = "PORTC1";
             this.PORTC1.Size = new System.Drawing.Size(32, 17);
             this.PORTC1.TabIndex = 0;
             this.PORTC1.Text = "1";
             this.PORTC1.UseVisualStyleBackColor = true;
             this.PORTC1.Visible = false;
+            this.PORTC1.CheckedChanged += new System.EventHandler(this.zmena_PORTC);
             // 
-            // PORTB7
+            // PINC1
             // 
-            this.PORTB7.AutoSize = true;
-            this.PORTB7.Location = new System.Drawing.Point(53, 88);
-            this.PORTB7.Name = "PORTB7";
-            this.PORTB7.Size = new System.Drawing.Size(32, 17);
-            this.PORTB7.TabIndex = 0;
-            this.PORTB7.Text = "7";
-            this.PORTB7.UseVisualStyleBackColor = true;
-            this.PORTB7.Visible = false;
+            this.PINC1.AutoCheck = false;
+            this.PINC1.AutoSize = true;
+            this.PINC1.Enabled = false;
+            this.PINC1.Location = new System.Drawing.Point(10, 45);
+            this.PINC1.Name = "PINC1";
+            this.PINC1.Size = new System.Drawing.Size(31, 17);
+            this.PINC1.TabIndex = 0;
+            this.PINC1.TabStop = true;
+            this.PINC1.Text = "1";
+            this.PINC1.UseVisualStyleBackColor = true;
+            // 
+            // PORTC2
+            // 
+            this.PORTC2.AutoSize = true;
+            this.PORTC2.Location = new System.Drawing.Point(10, 70);
+            this.PORTC2.Name = "PORTC2";
+            this.PORTC2.Size = new System.Drawing.Size(32, 17);
+            this.PORTC2.TabIndex = 0;
+            this.PORTC2.Text = "2";
+            this.PORTC2.UseVisualStyleBackColor = true;
+            this.PORTC2.Visible = false;
+            this.PORTC2.CheckedChanged += new System.EventHandler(this.zmena_PORTC);
+            // 
+            // PINC2
+            // 
+            this.PINC2.AutoCheck = false;
+            this.PINC2.AutoSize = true;
+            this.PINC2.Enabled = false;
+            this.PINC2.Location = new System.Drawing.Point(10, 70);
+            this.PINC2.Name = "PINC2";
+            this.PINC2.Size = new System.Drawing.Size(31, 17);
+            this.PINC2.TabIndex = 0;
+            this.PINC2.TabStop = true;
+            this.PINC2.Text = "2";
+            this.PINC2.UseVisualStyleBackColor = true;
+            // 
+            // PORTC3
+            // 
+            this.PORTC3.AutoSize = true;
+            this.PORTC3.Location = new System.Drawing.Point(50, 20);
+            this.PORTC3.Name = "PORTC3";
+            this.PORTC3.Size = new System.Drawing.Size(32, 17);
+            this.PORTC3.TabIndex = 0;
+            this.PORTC3.Text = "3";
+            this.PORTC3.UseVisualStyleBackColor = true;
+            this.PORTC3.Visible = false;
+            this.PORTC3.CheckedChanged += new System.EventHandler(this.zmena_PORTC);
+            // 
+            // PINC3
+            // 
+            this.PINC3.AutoCheck = false;
+            this.PINC3.AutoSize = true;
+            this.PINC3.Enabled = false;
+            this.PINC3.Location = new System.Drawing.Point(50, 20);
+            this.PINC3.Name = "PINC3";
+            this.PINC3.Size = new System.Drawing.Size(31, 17);
+            this.PINC3.TabIndex = 0;
+            this.PINC3.TabStop = true;
+            this.PINC3.Text = "3";
+            this.PINC3.UseVisualStyleBackColor = true;
+            // 
+            // PORTC5
+            // 
+            this.PORTC5.AutoSize = true;
+            this.PORTC5.Location = new System.Drawing.Point(50, 70);
+            this.PORTC5.Name = "PORTC5";
+            this.PORTC5.Size = new System.Drawing.Size(32, 17);
+            this.PORTC5.TabIndex = 0;
+            this.PORTC5.Text = "5";
+            this.PORTC5.UseVisualStyleBackColor = true;
+            this.PORTC5.Visible = false;
+            this.PORTC5.CheckedChanged += new System.EventHandler(this.zmena_PORTC);
+            // 
+            // PORTC4
+            // 
+            this.PORTC4.AutoSize = true;
+            this.PORTC4.Location = new System.Drawing.Point(50, 45);
+            this.PORTC4.Name = "PORTC4";
+            this.PORTC4.Size = new System.Drawing.Size(32, 17);
+            this.PORTC4.TabIndex = 0;
+            this.PORTC4.Text = "4";
+            this.PORTC4.UseVisualStyleBackColor = true;
+            this.PORTC4.Visible = false;
+            this.PORTC4.CheckedChanged += new System.EventHandler(this.zmena_PORTC);
+            // 
+            // PINC4
+            // 
+            this.PINC4.AutoCheck = false;
+            this.PINC4.AutoSize = true;
+            this.PINC4.Enabled = false;
+            this.PINC4.Location = new System.Drawing.Point(50, 45);
+            this.PINC4.Name = "PINC4";
+            this.PINC4.Size = new System.Drawing.Size(31, 17);
+            this.PINC4.TabIndex = 0;
+            this.PINC4.TabStop = true;
+            this.PINC4.Text = "4";
+            this.PINC4.UseVisualStyleBackColor = true;
+            // 
+            // PINC5
+            // 
+            this.PINC5.AutoCheck = false;
+            this.PINC5.AutoSize = true;
+            this.PINC5.Enabled = false;
+            this.PINC5.Location = new System.Drawing.Point(50, 70);
+            this.PINC5.Name = "PINC5";
+            this.PINC5.Size = new System.Drawing.Size(31, 17);
+            this.PINC5.TabIndex = 0;
+            this.PINC5.TabStop = true;
+            this.PINC5.Text = "5";
+            this.PINC5.UseVisualStyleBackColor = true;
             // 
             // PORTB0
             // 
             this.PORTB0.AutoSize = true;
-            this.PORTB0.Location = new System.Drawing.Point(6, 17);
+            this.PORTB0.Location = new System.Drawing.Point(10, 20);
             this.PORTB0.Name = "PORTB0";
             this.PORTB0.Size = new System.Drawing.Size(32, 17);
             this.PORTB0.TabIndex = 0;
@@ -472,21 +399,10 @@
             this.PORTB0.UseVisualStyleBackColor = true;
             this.PORTB0.Visible = false;
             // 
-            // PORTB6
-            // 
-            this.PORTB6.AutoSize = true;
-            this.PORTB6.Location = new System.Drawing.Point(53, 63);
-            this.PORTB6.Name = "PORTB6";
-            this.PORTB6.Size = new System.Drawing.Size(32, 17);
-            this.PORTB6.TabIndex = 0;
-            this.PORTB6.Text = "6";
-            this.PORTB6.UseVisualStyleBackColor = true;
-            this.PORTB6.Visible = false;
-            // 
             // PORTB1
             // 
             this.PORTB1.AutoSize = true;
-            this.PORTB1.Location = new System.Drawing.Point(6, 42);
+            this.PORTB1.Location = new System.Drawing.Point(10, 45);
             this.PORTB1.Name = "PORTB1";
             this.PORTB1.Size = new System.Drawing.Size(32, 17);
             this.PORTB1.TabIndex = 0;
@@ -497,18 +413,19 @@
             // PORTB5
             // 
             this.PORTB5.AutoSize = true;
-            this.PORTB5.Location = new System.Drawing.Point(54, 41);
+            this.PORTB5.Location = new System.Drawing.Point(50, 70);
             this.PORTB5.Name = "PORTB5";
             this.PORTB5.Size = new System.Drawing.Size(32, 17);
             this.PORTB5.TabIndex = 0;
             this.PORTB5.Text = "5";
             this.PORTB5.UseVisualStyleBackColor = true;
             this.PORTB5.Visible = false;
+            this.PORTB5.CheckedChanged += new System.EventHandler(this.zmena_PORTB);
             // 
             // PORTB2
             // 
             this.PORTB2.AutoSize = true;
-            this.PORTB2.Location = new System.Drawing.Point(6, 64);
+            this.PORTB2.Location = new System.Drawing.Point(10, 70);
             this.PORTB2.Name = "PORTB2";
             this.PORTB2.Size = new System.Drawing.Size(32, 17);
             this.PORTB2.TabIndex = 0;
@@ -519,7 +436,7 @@
             // PORTB4
             // 
             this.PORTB4.AutoSize = true;
-            this.PORTB4.Location = new System.Drawing.Point(53, 19);
+            this.PORTB4.Location = new System.Drawing.Point(50, 45);
             this.PORTB4.Name = "PORTB4";
             this.PORTB4.Size = new System.Drawing.Size(32, 17);
             this.PORTB4.TabIndex = 0;
@@ -530,7 +447,7 @@
             // PORTB3
             // 
             this.PORTB3.AutoSize = true;
-            this.PORTB3.Location = new System.Drawing.Point(6, 88);
+            this.PORTB3.Location = new System.Drawing.Point(50, 20);
             this.PORTB3.Name = "PORTB3";
             this.PORTB3.Size = new System.Drawing.Size(32, 17);
             this.PORTB3.TabIndex = 0;
@@ -540,280 +457,262 @@
             // 
             // DDRC
             // 
-            this.DDRC.Controls.Add(this.DDRC7);
             this.DDRC.Controls.Add(this.DDRC0);
-            this.DDRC.Controls.Add(this.DDRC6);
             this.DDRC.Controls.Add(this.DDRC1);
             this.DDRC.Controls.Add(this.DDRC5);
             this.DDRC.Controls.Add(this.DDRC2);
             this.DDRC.Controls.Add(this.DDRC4);
             this.DDRC.Controls.Add(this.DDRC3);
-            this.DDRC.Location = new System.Drawing.Point(209, 244);
+            this.DDRC.Enabled = false;
+            this.DDRC.Location = new System.Drawing.Point(203, 42);
             this.DDRC.Name = "DDRC";
-            this.DDRC.Size = new System.Drawing.Size(91, 120);
+            this.DDRC.Size = new System.Drawing.Size(91, 103);
             this.DDRC.TabIndex = 2;
             this.DDRC.TabStop = false;
             this.DDRC.Text = "DDRC";
             // 
-            // DDRC7
-            // 
-            this.DDRC7.AutoSize = true;
-            this.DDRC7.Location = new System.Drawing.Point(54, 88);
-            this.DDRC7.Name = "DDRC7";
-            this.DDRC7.Size = new System.Drawing.Size(32, 17);
-            this.DDRC7.TabIndex = 0;
-            this.DDRC7.Text = "7";
-            this.DDRC7.UseVisualStyleBackColor = true;
-            this.DDRC7.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
-            // 
             // DDRC0
             // 
             this.DDRC0.AutoSize = true;
-            this.DDRC0.Location = new System.Drawing.Point(6, 19);
+            this.DDRC0.Location = new System.Drawing.Point(10, 20);
             this.DDRC0.Name = "DDRC0";
             this.DDRC0.Size = new System.Drawing.Size(32, 17);
             this.DDRC0.TabIndex = 0;
             this.DDRC0.Text = "0";
             this.DDRC0.UseVisualStyleBackColor = true;
-            this.DDRC0.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
-            // 
-            // DDRC6
-            // 
-            this.DDRC6.AutoSize = true;
-            this.DDRC6.Location = new System.Drawing.Point(54, 65);
-            this.DDRC6.Name = "DDRC6";
-            this.DDRC6.Size = new System.Drawing.Size(32, 17);
-            this.DDRC6.TabIndex = 0;
-            this.DDRC6.Text = "6";
-            this.DDRC6.UseVisualStyleBackColor = true;
-            this.DDRC6.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
+            this.DDRC0.CheckedChanged += new System.EventHandler(this.zmena_DDRC);
             // 
             // DDRC1
             // 
             this.DDRC1.AutoSize = true;
-            this.DDRC1.Location = new System.Drawing.Point(6, 42);
+            this.DDRC1.Location = new System.Drawing.Point(10, 45);
             this.DDRC1.Name = "DDRC1";
             this.DDRC1.Size = new System.Drawing.Size(32, 17);
             this.DDRC1.TabIndex = 0;
             this.DDRC1.Text = "1";
             this.DDRC1.UseVisualStyleBackColor = true;
-            this.DDRC1.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
+            this.DDRC1.CheckedChanged += new System.EventHandler(this.zmena_DDRC);
             // 
             // DDRC5
             // 
             this.DDRC5.AutoSize = true;
-            this.DDRC5.Location = new System.Drawing.Point(54, 42);
+            this.DDRC5.Location = new System.Drawing.Point(50, 70);
             this.DDRC5.Name = "DDRC5";
             this.DDRC5.Size = new System.Drawing.Size(32, 17);
             this.DDRC5.TabIndex = 0;
             this.DDRC5.Text = "5";
             this.DDRC5.UseVisualStyleBackColor = true;
-            this.DDRC5.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
+            this.DDRC5.CheckedChanged += new System.EventHandler(this.zmena_DDRC);
             // 
             // DDRC2
             // 
             this.DDRC2.AutoSize = true;
-            this.DDRC2.Location = new System.Drawing.Point(6, 65);
+            this.DDRC2.Location = new System.Drawing.Point(10, 70);
             this.DDRC2.Name = "DDRC2";
             this.DDRC2.Size = new System.Drawing.Size(32, 17);
             this.DDRC2.TabIndex = 0;
             this.DDRC2.Text = "2";
             this.DDRC2.UseVisualStyleBackColor = true;
-            this.DDRC2.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
+            this.DDRC2.CheckedChanged += new System.EventHandler(this.zmena_DDRC);
             // 
             // DDRC4
             // 
             this.DDRC4.AutoSize = true;
-            this.DDRC4.Location = new System.Drawing.Point(54, 18);
+            this.DDRC4.Location = new System.Drawing.Point(50, 45);
             this.DDRC4.Name = "DDRC4";
             this.DDRC4.Size = new System.Drawing.Size(32, 17);
             this.DDRC4.TabIndex = 0;
             this.DDRC4.Text = "4";
             this.DDRC4.UseVisualStyleBackColor = true;
-            this.DDRC4.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
+            this.DDRC4.CheckedChanged += new System.EventHandler(this.zmena_DDRC);
             // 
             // DDRC3
             // 
             this.DDRC3.AutoSize = true;
-            this.DDRC3.Location = new System.Drawing.Point(5, 88);
+            this.DDRC3.Location = new System.Drawing.Point(50, 20);
             this.DDRC3.Name = "DDRC3";
             this.DDRC3.Size = new System.Drawing.Size(32, 17);
             this.DDRC3.TabIndex = 0;
             this.DDRC3.Text = "3";
             this.DDRC3.UseVisualStyleBackColor = true;
-            this.DDRC3.CheckedChanged += new System.EventHandler(this.zmena_nastavenia);
+            this.DDRC3.CheckedChanged += new System.EventHandler(this.zmena_DDRC);
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Controls.Add(this.label4);
-            this.groupBox5.Controls.Add(this.label3);
-            this.groupBox5.Controls.Add(this.label2);
-            this.groupBox5.Controls.Add(this.label1);
-            this.groupBox5.Controls.Add(this.textBox5);
-            this.groupBox5.Controls.Add(this.textBox3);
-            this.groupBox5.Controls.Add(this.textBox4);
-            this.groupBox5.Controls.Add(this.textBox6);
-            this.groupBox5.Controls.Add(this.textBox2);
-            this.groupBox5.Controls.Add(this.textBox1);
-            this.groupBox5.Location = new System.Drawing.Point(403, 244);
+            this.groupBox5.Controls.Add(this.ADC_ON_OFF);
+            this.groupBox5.Controls.Add(this.ADC1_radiobutton);
+            this.groupBox5.Controls.Add(this.ADC5_radiobutton);
+            this.groupBox5.Controls.Add(this.ADC4_radiobutton);
+            this.groupBox5.Controls.Add(this.ADC3_radiobutton);
+            this.groupBox5.Controls.Add(this.ADC2_radiobutton);
+            this.groupBox5.Controls.Add(this.ADC0_radiobutton);
+            this.groupBox5.Controls.Add(this.ADC5_box);
+            this.groupBox5.Controls.Add(this.ADC2_box);
+            this.groupBox5.Controls.Add(this.ADC3_box);
+            this.groupBox5.Controls.Add(this.ADC4_box);
+            this.groupBox5.Controls.Add(this.ADC1_box);
+            this.groupBox5.Controls.Add(this.ADC0_box);
+            this.groupBox5.Location = new System.Drawing.Point(434, 246);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(378, 120);
+            this.groupBox5.Size = new System.Drawing.Size(347, 154);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "ADC";
             // 
-            // label6
+            // ADC_ON_OFF
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(217, 87);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "ADC5";
+            this.ADC_ON_OFF.AutoSize = true;
+            this.ADC_ON_OFF.Location = new System.Drawing.Point(9, 19);
+            this.ADC_ON_OFF.Name = "ADC_ON_OFF";
+            this.ADC_ON_OFF.Size = new System.Drawing.Size(59, 17);
+            this.ADC_ON_OFF.TabIndex = 3;
+            this.ADC_ON_OFF.Text = "Enable";
+            this.ADC_ON_OFF.UseVisualStyleBackColor = true;
+            this.ADC_ON_OFF.CheckedChanged += new System.EventHandler(this.zmena_ON_OFF);
             // 
-            // label5
+            // ADC1_radiobutton
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(217, 51);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "ADC4";
+            this.ADC1_radiobutton.AutoSize = true;
+            this.ADC1_radiobutton.Enabled = false;
+            this.ADC1_radiobutton.Location = new System.Drawing.Point(9, 82);
+            this.ADC1_radiobutton.Name = "ADC1_radiobutton";
+            this.ADC1_radiobutton.Size = new System.Drawing.Size(56, 17);
+            this.ADC1_radiobutton.TabIndex = 2;
+            this.ADC1_radiobutton.Text = "ADC 1";
+            this.ADC1_radiobutton.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // ADC5_radiobutton
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(217, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "ADC3";
+            this.ADC5_radiobutton.AutoSize = true;
+            this.ADC5_radiobutton.Enabled = false;
+            this.ADC5_radiobutton.Location = new System.Drawing.Point(174, 116);
+            this.ADC5_radiobutton.Name = "ADC5_radiobutton";
+            this.ADC5_radiobutton.Size = new System.Drawing.Size(56, 17);
+            this.ADC5_radiobutton.TabIndex = 2;
+            this.ADC5_radiobutton.Text = "ADC 5";
+            this.ADC5_radiobutton.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // ADC4_radiobutton
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 88);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "ADC2";
+            this.ADC4_radiobutton.AutoSize = true;
+            this.ADC4_radiobutton.Enabled = false;
+            this.ADC4_radiobutton.Location = new System.Drawing.Point(174, 82);
+            this.ADC4_radiobutton.Name = "ADC4_radiobutton";
+            this.ADC4_radiobutton.Size = new System.Drawing.Size(56, 17);
+            this.ADC4_radiobutton.TabIndex = 2;
+            this.ADC4_radiobutton.Text = "ADC 4";
+            this.ADC4_radiobutton.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // ADC3_radiobutton
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 54);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "ADC1";
+            this.ADC3_radiobutton.AutoSize = true;
+            this.ADC3_radiobutton.Enabled = false;
+            this.ADC3_radiobutton.Location = new System.Drawing.Point(174, 44);
+            this.ADC3_radiobutton.Name = "ADC3_radiobutton";
+            this.ADC3_radiobutton.Size = new System.Drawing.Size(56, 17);
+            this.ADC3_radiobutton.TabIndex = 2;
+            this.ADC3_radiobutton.Text = "ADC 3";
+            this.ADC3_radiobutton.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // ADC2_radiobutton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "ADC0";
+            this.ADC2_radiobutton.AutoSize = true;
+            this.ADC2_radiobutton.Enabled = false;
+            this.ADC2_radiobutton.Location = new System.Drawing.Point(9, 116);
+            this.ADC2_radiobutton.Name = "ADC2_radiobutton";
+            this.ADC2_radiobutton.Size = new System.Drawing.Size(56, 17);
+            this.ADC2_radiobutton.TabIndex = 2;
+            this.ADC2_radiobutton.Text = "ADC 2";
+            this.ADC2_radiobutton.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // ADC0_radiobutton
             // 
-            this.textBox5.Location = new System.Drawing.Point(258, 84);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 0;
+            this.ADC0_radiobutton.AutoSize = true;
+            this.ADC0_radiobutton.Checked = true;
+            this.ADC0_radiobutton.Enabled = false;
+            this.ADC0_radiobutton.Location = new System.Drawing.Point(9, 44);
+            this.ADC0_radiobutton.Name = "ADC0_radiobutton";
+            this.ADC0_radiobutton.Size = new System.Drawing.Size(56, 17);
+            this.ADC0_radiobutton.TabIndex = 2;
+            this.ADC0_radiobutton.TabStop = true;
+            this.ADC0_radiobutton.Text = "ADC 0";
+            this.ADC0_radiobutton.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // ADC5_box
             // 
-            this.textBox3.Location = new System.Drawing.Point(50, 85);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 0;
+            this.ADC5_box.Enabled = false;
+            this.ADC5_box.Location = new System.Drawing.Point(236, 115);
+            this.ADC5_box.Name = "ADC5_box";
+            this.ADC5_box.Size = new System.Drawing.Size(100, 20);
+            this.ADC5_box.TabIndex = 0;
             // 
-            // textBox4
+            // ADC2_box
             // 
-            this.textBox4.Location = new System.Drawing.Point(258, 14);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 0;
+            this.ADC2_box.Enabled = false;
+            this.ADC2_box.Location = new System.Drawing.Point(68, 115);
+            this.ADC2_box.Name = "ADC2_box";
+            this.ADC2_box.Size = new System.Drawing.Size(100, 20);
+            this.ADC2_box.TabIndex = 0;
             // 
-            // textBox6
+            // ADC3_box
             // 
-            this.textBox6.Location = new System.Drawing.Point(258, 48);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 0;
+            this.ADC3_box.Enabled = false;
+            this.ADC3_box.Location = new System.Drawing.Point(236, 43);
+            this.ADC3_box.Name = "ADC3_box";
+            this.ADC3_box.Size = new System.Drawing.Size(100, 20);
+            this.ADC3_box.TabIndex = 0;
             // 
-            // textBox2
+            // ADC4_box
             // 
-            this.textBox2.Location = new System.Drawing.Point(50, 51);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 0;
+            this.ADC4_box.Enabled = false;
+            this.ADC4_box.Location = new System.Drawing.Point(236, 81);
+            this.ADC4_box.Name = "ADC4_box";
+            this.ADC4_box.Size = new System.Drawing.Size(100, 20);
+            this.ADC4_box.TabIndex = 0;
             // 
-            // textBox1
+            // ADC1_box
             // 
-            this.textBox1.Location = new System.Drawing.Point(50, 15);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.ADC1_box.Enabled = false;
+            this.ADC1_box.Location = new System.Drawing.Point(68, 81);
+            this.ADC1_box.Name = "ADC1_box";
+            this.ADC1_box.Size = new System.Drawing.Size(100, 20);
+            this.ADC1_box.TabIndex = 0;
+            // 
+            // ADC0_box
+            // 
+            this.ADC0_box.Enabled = false;
+            this.ADC0_box.Location = new System.Drawing.Point(68, 43);
+            this.ADC0_box.Name = "ADC0_box";
+            this.ADC0_box.Size = new System.Drawing.Size(100, 20);
+            this.ADC0_box.TabIndex = 0;
             // 
             // PORTB_PINB
             // 
-            this.PORTB_PINB.Controls.Add(this.PINB6);
-            this.PORTB_PINB.Controls.Add(this.PINB5);
+            this.PORTB_PINB.Controls.Add(this.PORTB4);
+            this.PORTB_PINB.Controls.Add(this.PORTB3);
             this.PORTB_PINB.Controls.Add(this.PINB4);
             this.PORTB_PINB.Controls.Add(this.PINB3);
-            this.PORTB_PINB.Controls.Add(this.PINB2);
-            this.PORTB_PINB.Controls.Add(this.PINB1);
-            this.PORTB_PINB.Controls.Add(this.PINB0);
-            this.PORTB_PINB.Controls.Add(this.PORTB6);
-            this.PORTB_PINB.Controls.Add(this.PORTB0);
             this.PORTB_PINB.Controls.Add(this.PORTB5);
-            this.PORTB_PINB.Controls.Add(this.PORTB1);
-            this.PORTB_PINB.Controls.Add(this.PORTB4);
+            this.PORTB_PINB.Controls.Add(this.PINB5);
             this.PORTB_PINB.Controls.Add(this.PORTB2);
-            this.PORTB_PINB.Controls.Add(this.PORTB3);
-            this.PORTB_PINB.Controls.Add(this.PINB7);
-            this.PORTB_PINB.Controls.Add(this.PORTB7);
-            this.PORTB_PINB.Location = new System.Drawing.Point(112, 244);
+            this.PORTB_PINB.Controls.Add(this.PINB2);
+            this.PORTB_PINB.Controls.Add(this.PORTB1);
+            this.PORTB_PINB.Controls.Add(this.PINB1);
+            this.PORTB_PINB.Controls.Add(this.PORTB0);
+            this.PORTB_PINB.Controls.Add(this.PINB0);
+            this.PORTB_PINB.Enabled = false;
+            this.PORTB_PINB.Location = new System.Drawing.Point(106, 42);
             this.PORTB_PINB.Name = "PORTB_PINB";
-            this.PORTB_PINB.Size = new System.Drawing.Size(91, 120);
+            this.PORTB_PINB.Size = new System.Drawing.Size(91, 103);
             this.PORTB_PINB.TabIndex = 2;
             this.PORTB_PINB.TabStop = false;
             this.PORTB_PINB.Text = "PORTB/PINB";
-            // 
-            // PINB6
-            // 
-            this.PINB6.AutoSize = true;
-            this.PINB6.Enabled = false;
-            this.PINB6.Location = new System.Drawing.Point(54, 64);
-            this.PINB6.Name = "PINB6";
-            this.PINB6.Size = new System.Drawing.Size(31, 17);
-            this.PINB6.TabIndex = 0;
-            this.PINB6.TabStop = true;
-            this.PINB6.Text = "6";
-            this.PINB6.UseVisualStyleBackColor = true;
-            // 
-            // PINB5
-            // 
-            this.PINB5.AutoSize = true;
-            this.PINB5.Enabled = false;
-            this.PINB5.Location = new System.Drawing.Point(54, 41);
-            this.PINB5.Name = "PINB5";
-            this.PINB5.Size = new System.Drawing.Size(31, 17);
-            this.PINB5.TabIndex = 0;
-            this.PINB5.TabStop = true;
-            this.PINB5.Text = "5";
-            this.PINB5.UseVisualStyleBackColor = true;
             // 
             // PINB4
             // 
             this.PINB4.AutoSize = true;
             this.PINB4.Enabled = false;
-            this.PINB4.Location = new System.Drawing.Point(54, 18);
+            this.PINB4.Location = new System.Drawing.Point(50, 45);
             this.PINB4.Name = "PINB4";
             this.PINB4.Size = new System.Drawing.Size(31, 17);
             this.PINB4.TabIndex = 0;
@@ -825,7 +724,7 @@
             // 
             this.PINB3.AutoSize = true;
             this.PINB3.Enabled = false;
-            this.PINB3.Location = new System.Drawing.Point(7, 87);
+            this.PINB3.Location = new System.Drawing.Point(50, 20);
             this.PINB3.Name = "PINB3";
             this.PINB3.Size = new System.Drawing.Size(31, 17);
             this.PINB3.TabIndex = 0;
@@ -833,11 +732,23 @@
             this.PINB3.Text = "3";
             this.PINB3.UseVisualStyleBackColor = true;
             // 
+            // PINB5
+            // 
+            this.PINB5.AutoSize = true;
+            this.PINB5.Enabled = false;
+            this.PINB5.Location = new System.Drawing.Point(50, 70);
+            this.PINB5.Name = "PINB5";
+            this.PINB5.Size = new System.Drawing.Size(31, 17);
+            this.PINB5.TabIndex = 0;
+            this.PINB5.TabStop = true;
+            this.PINB5.Text = "5";
+            this.PINB5.UseVisualStyleBackColor = true;
+            // 
             // PINB2
             // 
             this.PINB2.AutoSize = true;
             this.PINB2.Enabled = false;
-            this.PINB2.Location = new System.Drawing.Point(7, 64);
+            this.PINB2.Location = new System.Drawing.Point(10, 70);
             this.PINB2.Name = "PINB2";
             this.PINB2.Size = new System.Drawing.Size(31, 17);
             this.PINB2.TabIndex = 0;
@@ -849,7 +760,7 @@
             // 
             this.PINB1.AutoSize = true;
             this.PINB1.Enabled = false;
-            this.PINB1.Location = new System.Drawing.Point(7, 41);
+            this.PINB1.Location = new System.Drawing.Point(10, 45);
             this.PINB1.Name = "PINB1";
             this.PINB1.Size = new System.Drawing.Size(31, 17);
             this.PINB1.TabIndex = 0;
@@ -861,7 +772,7 @@
             // 
             this.PINB0.AutoSize = true;
             this.PINB0.Enabled = false;
-            this.PINB0.Location = new System.Drawing.Point(7, 17);
+            this.PINB0.Location = new System.Drawing.Point(10, 20);
             this.PINB0.Name = "PINB0";
             this.PINB0.Size = new System.Drawing.Size(31, 17);
             this.PINB0.TabIndex = 0;
@@ -869,21 +780,13 @@
             this.PINB0.Text = "0";
             this.PINB0.UseVisualStyleBackColor = true;
             // 
-            // PINB7
-            // 
-            this.PINB7.AutoSize = true;
-            this.PINB7.Enabled = false;
-            this.PINB7.Location = new System.Drawing.Point(54, 86);
-            this.PINB7.Name = "PINB7";
-            this.PINB7.Size = new System.Drawing.Size(31, 17);
-            this.PINB7.TabIndex = 0;
-            this.PINB7.TabStop = true;
-            this.PINB7.Text = "7";
-            this.PINB7.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.zdvih_zozadu);
+            this.panel1.Controls.Add(this.Zdvih_zpredu);
+            this.panel1.Controls.Add(this.zaklon);
+            this.panel1.Controls.Add(this.predklon);
             this.panel1.Controls.Add(this.UP_LEFT);
             this.panel1.Controls.Add(this.DOWN_LEFT);
             this.panel1.Controls.Add(this.DOWN_RIGHT);
@@ -900,15 +803,93 @@
             this.panel1.Size = new System.Drawing.Size(626, 222);
             this.panel1.TabIndex = 6;
             // 
-            // button7
+            // Open_button
             // 
-            this.button7.Location = new System.Drawing.Point(661, 215);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(120, 23);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Otvor spojenie";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.Open_button.Location = new System.Drawing.Point(661, 215);
+            this.Open_button.Name = "Open_button";
+            this.Open_button.Size = new System.Drawing.Size(120, 23);
+            this.Open_button.TabIndex = 7;
+            this.Open_button.Text = "Open connection";
+            this.Open_button.UseVisualStyleBackColor = true;
+            this.Open_button.Click += new System.EventHandler(this.Open_button_Click);
+            // 
+            // GPIO_refresh
+            // 
+            this.GPIO_refresh.Interval = 300;
+            this.GPIO_refresh.Tick += new System.EventHandler(this.GPIO_refresh_Tick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.GPIO_ON_OFF);
+            this.groupBox1.Controls.Add(this.DDRB);
+            this.groupBox1.Controls.Add(this.PORTC_PINC);
+            this.groupBox1.Controls.Add(this.PORTB_PINB);
+            this.groupBox1.Controls.Add(this.DDRC);
+            this.groupBox1.Location = new System.Drawing.Point(18, 246);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(410, 154);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "GPIO";
+            // 
+            // GPIO_ON_OFF
+            // 
+            this.GPIO_ON_OFF.AutoSize = true;
+            this.GPIO_ON_OFF.Location = new System.Drawing.Point(6, 19);
+            this.GPIO_ON_OFF.Name = "GPIO_ON_OFF";
+            this.GPIO_ON_OFF.Size = new System.Drawing.Size(59, 17);
+            this.GPIO_ON_OFF.TabIndex = 3;
+            this.GPIO_ON_OFF.Text = "Enable";
+            this.GPIO_ON_OFF.UseVisualStyleBackColor = true;
+            this.GPIO_ON_OFF.CheckedChanged += new System.EventHandler(this.zmena_ON_OFF);
+            // 
+            // ADC_refresh
+            // 
+            this.ADC_refresh.Tick += new System.EventHandler(this.ADC_refresh_Tick);
+            // 
+            // zdvih_zozadu
+            // 
+            this.zdvih_zozadu.BackColor = System.Drawing.Color.Silver;
+            this.zdvih_zozadu.Image = global::Isobot_terminal.Properties.Resources.kk;
+            this.zdvih_zozadu.Location = new System.Drawing.Point(147, 169);
+            this.zdvih_zozadu.Name = "zdvih_zozadu";
+            this.zdvih_zozadu.Size = new System.Drawing.Size(50, 50);
+            this.zdvih_zozadu.TabIndex = 6;
+            this.zdvih_zozadu.UseVisualStyleBackColor = false;
+            this.zdvih_zozadu.Click += new System.EventHandler(this.zdvih_zozadu_Click);
+            // 
+            // Zdvih_zpredu
+            // 
+            this.Zdvih_zpredu.BackColor = System.Drawing.Color.Silver;
+            this.Zdvih_zpredu.Image = global::Isobot_terminal.Properties.Resources.Bez_názvujj;
+            this.Zdvih_zpredu.Location = new System.Drawing.Point(204, 169);
+            this.Zdvih_zpredu.Name = "Zdvih_zpredu";
+            this.Zdvih_zpredu.Size = new System.Drawing.Size(50, 50);
+            this.Zdvih_zpredu.TabIndex = 6;
+            this.Zdvih_zpredu.UseVisualStyleBackColor = false;
+            this.Zdvih_zpredu.Click += new System.EventHandler(this.Zdvih_zpredu_Click);
+            // 
+            // zaklon
+            // 
+            this.zaklon.BackColor = System.Drawing.Color.Silver;
+            this.zaklon.Image = global::Isobot_terminal.Properties.Resources.Bez_názvu31;
+            this.zaklon.Location = new System.Drawing.Point(425, 169);
+            this.zaklon.Name = "zaklon";
+            this.zaklon.Size = new System.Drawing.Size(50, 50);
+            this.zaklon.TabIndex = 6;
+            this.zaklon.UseVisualStyleBackColor = false;
+            this.zaklon.Click += new System.EventHandler(this.zaklon_Click);
+            // 
+            // predklon
+            // 
+            this.predklon.BackColor = System.Drawing.Color.Silver;
+            this.predklon.Image = global::Isobot_terminal.Properties.Resources.Bez_názvu11;
+            this.predklon.Location = new System.Drawing.Point(366, 169);
+            this.predklon.Name = "predklon";
+            this.predklon.Size = new System.Drawing.Size(50, 50);
+            this.predklon.TabIndex = 6;
+            this.predklon.UseVisualStyleBackColor = false;
+            this.predklon.Click += new System.EventHandler(this.predklon_Click);
             // 
             // UP_LEFT
             // 
@@ -1023,15 +1004,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(793, 376);
-            this.Controls.Add(this.button7);
+            this.ClientSize = new System.Drawing.Size(793, 422);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Open_button);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.DDRC);
-            this.Controls.Add(this.DDRB);
             this.Controls.Add(this.command_box);
-            this.Controls.Add(this.PORTB_PINB);
-            this.Controls.Add(this.PORTC_PINC);
             this.Name = "Form1";
             this.Text = "Isobot terminal";
             this.DDRB.ResumeLayout(false);
@@ -1045,6 +1023,8 @@
             this.PORTB_PINB.ResumeLayout(false);
             this.PORTB_PINB.PerformLayout();
             this.panel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -1055,56 +1035,41 @@
         private System.Windows.Forms.ListBox command_box;
         private System.IO.Ports.SerialPort Isobot_com;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.ComponentModel.BackgroundWorker Scanning;
         private System.Windows.Forms.GroupBox DDRB;
         private System.Windows.Forms.GroupBox PORTC_PINC;
-        private System.Windows.Forms.CheckBox DDRB7;
-        private System.Windows.Forms.CheckBox DDRB6;
         private System.Windows.Forms.CheckBox DDRB5;
         private System.Windows.Forms.CheckBox DDRB4;
         private System.Windows.Forms.CheckBox DDRB3;
         private System.Windows.Forms.CheckBox DDRB2;
         private System.Windows.Forms.CheckBox DDRB1;
         private System.Windows.Forms.CheckBox DDRB0;
-        private System.Windows.Forms.CheckBox PORTC7;
         private System.Windows.Forms.CheckBox PORTC0;
-        private System.Windows.Forms.CheckBox PORTC6;
         private System.Windows.Forms.CheckBox PORTC1;
         private System.Windows.Forms.CheckBox PORTC5;
         private System.Windows.Forms.CheckBox PORTC2;
         private System.Windows.Forms.CheckBox PORTC4;
         private System.Windows.Forms.CheckBox PORTC3;
-        private System.Windows.Forms.CheckBox PORTB7;
         private System.Windows.Forms.CheckBox PORTB0;
-        private System.Windows.Forms.CheckBox PORTB6;
         private System.Windows.Forms.CheckBox PORTB1;
         private System.Windows.Forms.CheckBox PORTB5;
         private System.Windows.Forms.CheckBox PORTB2;
         private System.Windows.Forms.CheckBox PORTB4;
         private System.Windows.Forms.CheckBox PORTB3;
         private System.Windows.Forms.GroupBox DDRC;
-        private System.Windows.Forms.CheckBox DDRC7;
         private System.Windows.Forms.CheckBox DDRC0;
-        private System.Windows.Forms.CheckBox DDRC6;
         private System.Windows.Forms.CheckBox DDRC1;
         private System.Windows.Forms.CheckBox DDRC5;
         private System.Windows.Forms.CheckBox DDRC2;
         private System.Windows.Forms.CheckBox DDRC4;
         private System.Windows.Forms.CheckBox DDRC3;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton PINC7;
-        private System.Windows.Forms.RadioButton PINC6;
+        private System.Windows.Forms.TextBox ADC5_box;
+        private System.Windows.Forms.TextBox ADC2_box;
+        private System.Windows.Forms.TextBox ADC3_box;
+        private System.Windows.Forms.TextBox ADC4_box;
+        private System.Windows.Forms.TextBox ADC1_box;
+        private System.Windows.Forms.TextBox ADC0_box;
         private System.Windows.Forms.RadioButton PINC5;
         private System.Windows.Forms.RadioButton PINC4;
         private System.Windows.Forms.RadioButton PINC3;
@@ -1112,15 +1077,12 @@
         private System.Windows.Forms.RadioButton PINC1;
         private System.Windows.Forms.RadioButton PINC0;
         private System.Windows.Forms.GroupBox PORTB_PINB;
-        private System.Windows.Forms.RadioButton PINB7;
-        private System.Windows.Forms.RadioButton PINB6;
         private System.Windows.Forms.RadioButton PINB5;
         private System.Windows.Forms.RadioButton PINB4;
         private System.Windows.Forms.RadioButton PINB3;
         private System.Windows.Forms.RadioButton PINB2;
         private System.Windows.Forms.RadioButton PINB1;
         private System.Windows.Forms.RadioButton PINB0;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button UP;
         private System.Windows.Forms.Button LEFT;
         private System.Windows.Forms.Button DOWN;
@@ -1128,11 +1090,26 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button ROTATE_RIGHT;
         private System.Windows.Forms.Button ROTATE_LEFT;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button Open_button;
         private System.Windows.Forms.Button UP_LEFT;
         private System.Windows.Forms.Button DOWN_LEFT;
         private System.Windows.Forms.Button DOWN_RIGHT;
         private System.Windows.Forms.Button UP_RIGHT;
+        private System.Windows.Forms.Timer GPIO_refresh;
+        private System.Windows.Forms.RadioButton ADC1_radiobutton;
+        private System.Windows.Forms.RadioButton ADC4_radiobutton;
+        private System.Windows.Forms.RadioButton ADC3_radiobutton;
+        private System.Windows.Forms.RadioButton ADC2_radiobutton;
+        private System.Windows.Forms.RadioButton ADC0_radiobutton;
+        private System.Windows.Forms.CheckBox ADC_ON_OFF;
+        private System.Windows.Forms.RadioButton ADC5_radiobutton;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox GPIO_ON_OFF;
+        private System.Windows.Forms.Timer ADC_refresh;
+        private System.Windows.Forms.Button predklon;
+        private System.Windows.Forms.Button zaklon;
+        private System.Windows.Forms.Button Zdvih_zpredu;
+        private System.Windows.Forms.Button zdvih_zozadu;
     }
 }
 
