@@ -66,6 +66,12 @@
             this.DDRC4 = new System.Windows.Forms.CheckBox();
             this.DDRC3 = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.ADC5_progressbar = new System.Windows.Forms.ProgressBar();
+            this.ADC4_progressbar = new System.Windows.Forms.ProgressBar();
+            this.ADC3_progressbar = new System.Windows.Forms.ProgressBar();
+            this.ADC2_progressbar = new System.Windows.Forms.ProgressBar();
+            this.ADC1_progressbar = new System.Windows.Forms.ProgressBar();
+            this.ADC0_progressbar = new System.Windows.Forms.ProgressBar();
             this.ADC_ON_OFF = new System.Windows.Forms.CheckBox();
             this.ADC1_radiobutton = new System.Windows.Forms.RadioButton();
             this.ADC5_radiobutton = new System.Windows.Forms.RadioButton();
@@ -87,11 +93,6 @@
             this.PINB1 = new System.Windows.Forms.RadioButton();
             this.PINB0 = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Open_button = new System.Windows.Forms.Button();
-            this.GPIO_refresh = new System.Windows.Forms.Timer(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.GPIO_ON_OFF = new System.Windows.Forms.CheckBox();
-            this.ADC_refresh = new System.Windows.Forms.Timer(this.components);
             this.zdvih_zozadu = new System.Windows.Forms.Button();
             this.Zdvih_zpredu = new System.Windows.Forms.Button();
             this.zaklon = new System.Windows.Forms.Button();
@@ -107,14 +108,19 @@
             this.LEFT = new System.Windows.Forms.Button();
             this.DOWN = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Open_button = new System.Windows.Forms.Button();
+            this.GPIO_refresh = new System.Windows.Forms.Timer(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.GPIO_ON_OFF = new System.Windows.Forms.CheckBox();
+            this.ADC_refresh = new System.Windows.Forms.Timer(this.components);
             this.DDRB.SuspendLayout();
             this.PORTC_PINC.SuspendLayout();
             this.DDRC.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.PORTB_PINB.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // command_box
@@ -398,6 +404,7 @@
             this.PORTB0.Text = "0";
             this.PORTB0.UseVisualStyleBackColor = true;
             this.PORTB0.Visible = false;
+            this.PORTB0.CheckedChanged += new System.EventHandler(this.zmena_PORTB);
             // 
             // PORTB1
             // 
@@ -409,6 +416,7 @@
             this.PORTB1.Text = "1";
             this.PORTB1.UseVisualStyleBackColor = true;
             this.PORTB1.Visible = false;
+            this.PORTB1.CheckedChanged += new System.EventHandler(this.zmena_PORTB);
             // 
             // PORTB5
             // 
@@ -432,6 +440,7 @@
             this.PORTB2.Text = "2";
             this.PORTB2.UseVisualStyleBackColor = true;
             this.PORTB2.Visible = false;
+            this.PORTB2.CheckedChanged += new System.EventHandler(this.zmena_PORTB);
             // 
             // PORTB4
             // 
@@ -443,6 +452,7 @@
             this.PORTB4.Text = "4";
             this.PORTB4.UseVisualStyleBackColor = true;
             this.PORTB4.Visible = false;
+            this.PORTB4.CheckedChanged += new System.EventHandler(this.zmena_PORTB);
             // 
             // PORTB3
             // 
@@ -454,6 +464,7 @@
             this.PORTB3.Text = "3";
             this.PORTB3.UseVisualStyleBackColor = true;
             this.PORTB3.Visible = false;
+            this.PORTB3.CheckedChanged += new System.EventHandler(this.zmena_PORTB);
             // 
             // DDRC
             // 
@@ -539,6 +550,12 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.ADC5_progressbar);
+            this.groupBox5.Controls.Add(this.ADC4_progressbar);
+            this.groupBox5.Controls.Add(this.ADC3_progressbar);
+            this.groupBox5.Controls.Add(this.ADC2_progressbar);
+            this.groupBox5.Controls.Add(this.ADC1_progressbar);
+            this.groupBox5.Controls.Add(this.ADC0_progressbar);
             this.groupBox5.Controls.Add(this.ADC_ON_OFF);
             this.groupBox5.Controls.Add(this.ADC1_radiobutton);
             this.groupBox5.Controls.Add(this.ADC5_radiobutton);
@@ -552,12 +569,60 @@
             this.groupBox5.Controls.Add(this.ADC4_box);
             this.groupBox5.Controls.Add(this.ADC1_box);
             this.groupBox5.Controls.Add(this.ADC0_box);
-            this.groupBox5.Location = new System.Drawing.Point(434, 246);
+            this.groupBox5.Location = new System.Drawing.Point(422, 244);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(347, 154);
+            this.groupBox5.Size = new System.Drawing.Size(359, 154);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "ADC";
+            // 
+            // ADC5_progressbar
+            // 
+            this.ADC5_progressbar.Location = new System.Drawing.Point(276, 115);
+            this.ADC5_progressbar.Maximum = 255;
+            this.ADC5_progressbar.Name = "ADC5_progressbar";
+            this.ADC5_progressbar.Size = new System.Drawing.Size(74, 21);
+            this.ADC5_progressbar.TabIndex = 4;
+            // 
+            // ADC4_progressbar
+            // 
+            this.ADC4_progressbar.Location = new System.Drawing.Point(276, 80);
+            this.ADC4_progressbar.Maximum = 255;
+            this.ADC4_progressbar.Name = "ADC4_progressbar";
+            this.ADC4_progressbar.Size = new System.Drawing.Size(74, 21);
+            this.ADC4_progressbar.TabIndex = 4;
+            // 
+            // ADC3_progressbar
+            // 
+            this.ADC3_progressbar.Location = new System.Drawing.Point(276, 42);
+            this.ADC3_progressbar.Maximum = 255;
+            this.ADC3_progressbar.Name = "ADC3_progressbar";
+            this.ADC3_progressbar.Size = new System.Drawing.Size(74, 21);
+            this.ADC3_progressbar.TabIndex = 4;
+            // 
+            // ADC2_progressbar
+            // 
+            this.ADC2_progressbar.Location = new System.Drawing.Point(99, 115);
+            this.ADC2_progressbar.Maximum = 255;
+            this.ADC2_progressbar.Name = "ADC2_progressbar";
+            this.ADC2_progressbar.Size = new System.Drawing.Size(74, 21);
+            this.ADC2_progressbar.TabIndex = 4;
+            // 
+            // ADC1_progressbar
+            // 
+            this.ADC1_progressbar.Location = new System.Drawing.Point(99, 80);
+            this.ADC1_progressbar.Maximum = 255;
+            this.ADC1_progressbar.Name = "ADC1_progressbar";
+            this.ADC1_progressbar.Size = new System.Drawing.Size(74, 21);
+            this.ADC1_progressbar.TabIndex = 4;
+            // 
+            // ADC0_progressbar
+            // 
+            this.ADC0_progressbar.Location = new System.Drawing.Point(99, 42);
+            this.ADC0_progressbar.Maximum = 255;
+            this.ADC0_progressbar.Name = "ADC0_progressbar";
+            this.ADC0_progressbar.Size = new System.Drawing.Size(74, 21);
+            this.ADC0_progressbar.TabIndex = 4;
             // 
             // ADC_ON_OFF
             // 
@@ -580,39 +645,43 @@
             this.ADC1_radiobutton.TabIndex = 2;
             this.ADC1_radiobutton.Text = "ADC 1";
             this.ADC1_radiobutton.UseVisualStyleBackColor = true;
+            this.ADC1_radiobutton.CheckedChanged += new System.EventHandler(this.zmena_ADC_nastavenia);
             // 
             // ADC5_radiobutton
             // 
             this.ADC5_radiobutton.AutoSize = true;
             this.ADC5_radiobutton.Enabled = false;
-            this.ADC5_radiobutton.Location = new System.Drawing.Point(174, 116);
+            this.ADC5_radiobutton.Location = new System.Drawing.Point(188, 116);
             this.ADC5_radiobutton.Name = "ADC5_radiobutton";
             this.ADC5_radiobutton.Size = new System.Drawing.Size(56, 17);
             this.ADC5_radiobutton.TabIndex = 2;
             this.ADC5_radiobutton.Text = "ADC 5";
             this.ADC5_radiobutton.UseVisualStyleBackColor = true;
+            this.ADC5_radiobutton.CheckedChanged += new System.EventHandler(this.zmena_ADC_nastavenia);
             // 
             // ADC4_radiobutton
             // 
             this.ADC4_radiobutton.AutoSize = true;
             this.ADC4_radiobutton.Enabled = false;
-            this.ADC4_radiobutton.Location = new System.Drawing.Point(174, 82);
+            this.ADC4_radiobutton.Location = new System.Drawing.Point(188, 82);
             this.ADC4_radiobutton.Name = "ADC4_radiobutton";
             this.ADC4_radiobutton.Size = new System.Drawing.Size(56, 17);
             this.ADC4_radiobutton.TabIndex = 2;
             this.ADC4_radiobutton.Text = "ADC 4";
             this.ADC4_radiobutton.UseVisualStyleBackColor = true;
+            this.ADC4_radiobutton.CheckedChanged += new System.EventHandler(this.zmena_ADC_nastavenia);
             // 
             // ADC3_radiobutton
             // 
             this.ADC3_radiobutton.AutoSize = true;
             this.ADC3_radiobutton.Enabled = false;
-            this.ADC3_radiobutton.Location = new System.Drawing.Point(174, 44);
+            this.ADC3_radiobutton.Location = new System.Drawing.Point(188, 44);
             this.ADC3_radiobutton.Name = "ADC3_radiobutton";
             this.ADC3_radiobutton.Size = new System.Drawing.Size(56, 17);
             this.ADC3_radiobutton.TabIndex = 2;
             this.ADC3_radiobutton.Text = "ADC 3";
             this.ADC3_radiobutton.UseVisualStyleBackColor = true;
+            this.ADC3_radiobutton.CheckedChanged += new System.EventHandler(this.zmena_ADC_nastavenia);
             // 
             // ADC2_radiobutton
             // 
@@ -624,6 +693,7 @@
             this.ADC2_radiobutton.TabIndex = 2;
             this.ADC2_radiobutton.Text = "ADC 2";
             this.ADC2_radiobutton.UseVisualStyleBackColor = true;
+            this.ADC2_radiobutton.CheckedChanged += new System.EventHandler(this.zmena_ADC_nastavenia);
             // 
             // ADC0_radiobutton
             // 
@@ -637,54 +707,67 @@
             this.ADC0_radiobutton.TabStop = true;
             this.ADC0_radiobutton.Text = "ADC 0";
             this.ADC0_radiobutton.UseVisualStyleBackColor = true;
+            this.ADC0_radiobutton.CheckedChanged += new System.EventHandler(this.zmena_ADC_nastavenia);
             // 
             // ADC5_box
             // 
             this.ADC5_box.Enabled = false;
-            this.ADC5_box.Location = new System.Drawing.Point(236, 115);
+            this.ADC5_box.Location = new System.Drawing.Point(245, 115);
             this.ADC5_box.Name = "ADC5_box";
-            this.ADC5_box.Size = new System.Drawing.Size(100, 20);
+            this.ADC5_box.Size = new System.Drawing.Size(25, 20);
             this.ADC5_box.TabIndex = 0;
+            this.ADC5_box.Text = "x";
+            this.ADC5_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ADC2_box
             // 
             this.ADC2_box.Enabled = false;
             this.ADC2_box.Location = new System.Drawing.Point(68, 115);
             this.ADC2_box.Name = "ADC2_box";
-            this.ADC2_box.Size = new System.Drawing.Size(100, 20);
+            this.ADC2_box.Size = new System.Drawing.Size(25, 20);
             this.ADC2_box.TabIndex = 0;
+            this.ADC2_box.Text = "x";
+            this.ADC2_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ADC3_box
             // 
             this.ADC3_box.Enabled = false;
-            this.ADC3_box.Location = new System.Drawing.Point(236, 43);
+            this.ADC3_box.Location = new System.Drawing.Point(245, 43);
             this.ADC3_box.Name = "ADC3_box";
-            this.ADC3_box.Size = new System.Drawing.Size(100, 20);
+            this.ADC3_box.Size = new System.Drawing.Size(25, 20);
             this.ADC3_box.TabIndex = 0;
+            this.ADC3_box.Text = "x";
+            this.ADC3_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ADC4_box
             // 
             this.ADC4_box.Enabled = false;
-            this.ADC4_box.Location = new System.Drawing.Point(236, 81);
+            this.ADC4_box.Location = new System.Drawing.Point(245, 81);
             this.ADC4_box.Name = "ADC4_box";
-            this.ADC4_box.Size = new System.Drawing.Size(100, 20);
+            this.ADC4_box.Size = new System.Drawing.Size(25, 20);
             this.ADC4_box.TabIndex = 0;
+            this.ADC4_box.Text = "x";
+            this.ADC4_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ADC1_box
             // 
             this.ADC1_box.Enabled = false;
             this.ADC1_box.Location = new System.Drawing.Point(68, 81);
             this.ADC1_box.Name = "ADC1_box";
-            this.ADC1_box.Size = new System.Drawing.Size(100, 20);
+            this.ADC1_box.Size = new System.Drawing.Size(25, 20);
             this.ADC1_box.TabIndex = 0;
+            this.ADC1_box.Text = "x";
+            this.ADC1_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // ADC0_box
             // 
             this.ADC0_box.Enabled = false;
             this.ADC0_box.Location = new System.Drawing.Point(68, 43);
             this.ADC0_box.Name = "ADC0_box";
-            this.ADC0_box.Size = new System.Drawing.Size(100, 20);
+            this.ADC0_box.Size = new System.Drawing.Size(25, 20);
             this.ADC0_box.TabIndex = 0;
+            this.ADC0_box.Text = "x";
+            this.ADC0_box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PORTB_PINB
             // 
@@ -802,50 +885,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(626, 222);
             this.panel1.TabIndex = 6;
-            // 
-            // Open_button
-            // 
-            this.Open_button.Location = new System.Drawing.Point(661, 215);
-            this.Open_button.Name = "Open_button";
-            this.Open_button.Size = new System.Drawing.Size(120, 23);
-            this.Open_button.TabIndex = 7;
-            this.Open_button.Text = "Open connection";
-            this.Open_button.UseVisualStyleBackColor = true;
-            this.Open_button.Click += new System.EventHandler(this.Open_button_Click);
-            // 
-            // GPIO_refresh
-            // 
-            this.GPIO_refresh.Interval = 300;
-            this.GPIO_refresh.Tick += new System.EventHandler(this.GPIO_refresh_Tick);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.GPIO_ON_OFF);
-            this.groupBox1.Controls.Add(this.DDRB);
-            this.groupBox1.Controls.Add(this.PORTC_PINC);
-            this.groupBox1.Controls.Add(this.PORTB_PINB);
-            this.groupBox1.Controls.Add(this.DDRC);
-            this.groupBox1.Location = new System.Drawing.Point(18, 246);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(410, 154);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "GPIO";
-            // 
-            // GPIO_ON_OFF
-            // 
-            this.GPIO_ON_OFF.AutoSize = true;
-            this.GPIO_ON_OFF.Location = new System.Drawing.Point(6, 19);
-            this.GPIO_ON_OFF.Name = "GPIO_ON_OFF";
-            this.GPIO_ON_OFF.Size = new System.Drawing.Size(59, 17);
-            this.GPIO_ON_OFF.TabIndex = 3;
-            this.GPIO_ON_OFF.Text = "Enable";
-            this.GPIO_ON_OFF.UseVisualStyleBackColor = true;
-            this.GPIO_ON_OFF.CheckedChanged += new System.EventHandler(this.zmena_ON_OFF);
-            // 
-            // ADC_refresh
-            // 
-            this.ADC_refresh.Tick += new System.EventHandler(this.ADC_refresh_Tick);
             // 
             // zdvih_zozadu
             // 
@@ -1000,6 +1039,50 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // Open_button
+            // 
+            this.Open_button.Location = new System.Drawing.Point(661, 215);
+            this.Open_button.Name = "Open_button";
+            this.Open_button.Size = new System.Drawing.Size(120, 23);
+            this.Open_button.TabIndex = 7;
+            this.Open_button.Text = "Open connection";
+            this.Open_button.UseVisualStyleBackColor = true;
+            this.Open_button.Click += new System.EventHandler(this.Open_button_Click);
+            // 
+            // GPIO_refresh
+            // 
+            this.GPIO_refresh.Interval = 300;
+            this.GPIO_refresh.Tick += new System.EventHandler(this.GPIO_refresh_Tick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.GPIO_ON_OFF);
+            this.groupBox1.Controls.Add(this.DDRB);
+            this.groupBox1.Controls.Add(this.PORTC_PINC);
+            this.groupBox1.Controls.Add(this.PORTB_PINB);
+            this.groupBox1.Controls.Add(this.DDRC);
+            this.groupBox1.Location = new System.Drawing.Point(18, 246);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(398, 154);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "GPIO";
+            // 
+            // GPIO_ON_OFF
+            // 
+            this.GPIO_ON_OFF.AutoSize = true;
+            this.GPIO_ON_OFF.Location = new System.Drawing.Point(6, 19);
+            this.GPIO_ON_OFF.Name = "GPIO_ON_OFF";
+            this.GPIO_ON_OFF.Size = new System.Drawing.Size(59, 17);
+            this.GPIO_ON_OFF.TabIndex = 3;
+            this.GPIO_ON_OFF.Text = "Enable";
+            this.GPIO_ON_OFF.UseVisualStyleBackColor = true;
+            this.GPIO_ON_OFF.CheckedChanged += new System.EventHandler(this.zmena_ON_OFF);
+            // 
+            // ADC_refresh
+            // 
+            this.ADC_refresh.Tick += new System.EventHandler(this.ADC_refresh_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1023,9 +1106,9 @@
             this.PORTB_PINB.ResumeLayout(false);
             this.PORTB_PINB.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1110,6 +1193,12 @@
         private System.Windows.Forms.Button zaklon;
         private System.Windows.Forms.Button Zdvih_zpredu;
         private System.Windows.Forms.Button zdvih_zozadu;
+        private System.Windows.Forms.ProgressBar ADC0_progressbar;
+        private System.Windows.Forms.ProgressBar ADC5_progressbar;
+        private System.Windows.Forms.ProgressBar ADC4_progressbar;
+        private System.Windows.Forms.ProgressBar ADC3_progressbar;
+        private System.Windows.Forms.ProgressBar ADC2_progressbar;
+        private System.Windows.Forms.ProgressBar ADC1_progressbar;
     }
 }
 

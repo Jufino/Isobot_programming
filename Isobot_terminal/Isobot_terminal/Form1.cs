@@ -67,7 +67,7 @@ namespace Isobot_terminal
             Zdvih_zpredu.Image = transform(Zdvih_zpredu, 10);
             zdvih_zozadu.Image = transform(zdvih_zozadu, 10);
         }
-
+       
         private void scanning(object sender, DoWorkEventArgs e)
         {
             for (int opakuj = 0; opakuj < 10; opakuj++)
@@ -84,11 +84,12 @@ namespace Isobot_terminal
                         Isobot_com.Open();
                         System.Threading.Thread.Sleep(200);
                         Isobot_com.Write("A");
-                        Isobot_com.ReadTimeout = 200;
+                        Isobot_com.ReadTimeout = 500;
                         if (Isobot_com.ReadByte() == 5)
                         {
                             MessageBox.Show("Connection established");
                             poc_com = 21;
+                            opakuj = 11;
 
                         }
                     }
@@ -117,6 +118,7 @@ namespace Isobot_terminal
             {
                 byte[] pomocny = new byte[1];
                 pomocny[0] = Convert.ToByte(command);
+                Isobot_com.WriteTimeout = 100;
                 Isobot_com.Write(pomocny, 0, 1);
                 System.Threading.Thread.Sleep(2);
                 //-----------------------------------------------
@@ -364,7 +366,11 @@ namespace Isobot_terminal
                             PINB0.Checked = false;
                         }
                     }
-                    catch { }
+                    catch {
+                        GPIO_refresh.Enabled = false;
+                        GPIO_ON_OFF.Checked = false;
+                        MessageBox.Show("Connection lost");
+                    }
                 }  
         }
 
@@ -378,8 +384,14 @@ namespace Isobot_terminal
                     try
                     {
                         ADC0_box.Text = Isobot_com.ReadByte().ToString();
+                        ADC0_progressbar.Value = Convert.ToInt16(ADC0_box.Text);
                     }
-                    catch { }
+                    catch
+                    {
+                        ADC_refresh.Enabled = false;
+                        ADC_ON_OFF.Checked = false;
+                        MessageBox.Show("Connection lost");
+                    }
 
                 }
                 else if (ADC1_radiobutton.Checked == true)
@@ -388,8 +400,14 @@ namespace Isobot_terminal
                     try
                     {
                         ADC1_box.Text = Isobot_com.ReadByte().ToString();
+                        ADC1_progressbar.Value = Convert.ToInt16(ADC1_box.Text);
                     }
-                    catch { }
+                    catch
+                    {
+                        ADC_refresh.Enabled = false;
+                        ADC_ON_OFF.Checked = false;
+                        MessageBox.Show("Connection lost");
+                    }
                 }
                 else if (ADC2_radiobutton.Checked == true)
                 {
@@ -397,8 +415,14 @@ namespace Isobot_terminal
                     try
                     {
                         ADC2_box.Text = Isobot_com.ReadByte().ToString();
+                        ADC2_progressbar.Value = Convert.ToInt16(ADC2_box.Text);
                     }
-                    catch { }
+                    catch
+                    {
+                        ADC_refresh.Enabled = false;
+                        ADC_ON_OFF.Checked = false;
+                        MessageBox.Show("Connection lost");
+                    }
                 }
                 else if (ADC3_radiobutton.Checked == true)
                 {
@@ -406,8 +430,14 @@ namespace Isobot_terminal
                     try
                     {
                         ADC3_box.Text = Isobot_com.ReadByte().ToString();
+                        ADC3_progressbar.Value = Convert.ToInt16(ADC3_box.Text);
                     }
-                    catch { }
+                    catch
+                    {
+                        ADC_refresh.Enabled = false;
+                        ADC_ON_OFF.Checked = false;
+                        MessageBox.Show("Connection lost");
+                    }
                 }
                 else if (ADC4_radiobutton.Checked == true)
                 {
@@ -415,8 +445,14 @@ namespace Isobot_terminal
                     try
                     {
                         ADC4_box.Text = Isobot_com.ReadByte().ToString();
+                        ADC4_progressbar.Value = Convert.ToInt16(ADC4_box.Text);
                     }
-                    catch { }
+                    catch
+                    {
+                        ADC_refresh.Enabled = false;
+                        ADC_ON_OFF.Checked = false;
+                        MessageBox.Show("Connection lost");
+                    }
                 }
                 else
                 {
@@ -424,8 +460,13 @@ namespace Isobot_terminal
                     try
                     {
                         ADC5_box.Text = Isobot_com.ReadByte().ToString();
+                        ADC5_progressbar.Value = Convert.ToInt16(ADC5_box.Text);
                     }
-                    catch { }
+                    catch {
+                        ADC_refresh.Enabled = false;
+                        ADC_ON_OFF.Checked = false;
+                        MessageBox.Show("Connection lost");
+                    }
                 }
 
             }
@@ -619,6 +660,18 @@ namespace Isobot_terminal
                 ADC_ON_OFF.Enabled = !GPIO_ON_OFF.Checked;
                 GPIO_refresh.Enabled = GPIO_ON_OFF.Checked;
                 ADC_refresh.Enabled = ADC_ON_OFF.Checked;
+                ADC0_box.Text = "x";
+                ADC1_box.Text = "x";
+                ADC2_box.Text = "x";
+                ADC3_box.Text = "x";
+                ADC4_box.Text = "x";
+                ADC5_box.Text = "x";
+                ADC0_progressbar.Value = 0;
+                ADC1_progressbar.Value = 0;
+                ADC2_progressbar.Value = 0;
+                ADC3_progressbar.Value = 0;
+                ADC4_progressbar.Value = 0;
+                ADC5_progressbar.Value = 0;
             }
             else
             {
@@ -654,6 +707,16 @@ namespace Isobot_terminal
         private void Zdvih_zpredu_Click(object sender, EventArgs e)
         {
             string[] prikazy = new string[4];
+            prikazy[0] = data[14, 0].ToString();
+            prikazy[1] = data[14, 1].ToString();
+            prikazy[2] = data[14, 2].ToString();
+            prikazy[3] = data[14, 3].ToString();
+            Send_command("0", prikazy);
+        }
+
+        private void zdvih_zozadu_Click(object sender, EventArgs e)
+        {
+            string[] prikazy = new string[4];
             prikazy[0] = data[13, 0].ToString();
             prikazy[1] = data[13, 1].ToString();
             prikazy[2] = data[13, 2].ToString();
@@ -661,14 +724,20 @@ namespace Isobot_terminal
             Send_command("0", prikazy);
         }
 
-        private void zdvih_zozadu_Click(object sender, EventArgs e)
+        private void zmena_ADC_nastavenia(object sender, EventArgs e)
         {
-            string[] prikazy = new string[4];
-            prikazy[0] = data[14, 0].ToString();
-            prikazy[1] = data[14, 1].ToString();
-            prikazy[2] = data[14, 2].ToString();
-            prikazy[3] = data[14, 3].ToString();
-            Send_command("0", prikazy);
+            ADC0_box.Text = "x";
+            ADC1_box.Text = "x";
+            ADC2_box.Text = "x";
+            ADC3_box.Text = "x";
+            ADC4_box.Text = "x";
+            ADC5_box.Text = "x";
+            ADC0_progressbar.Value = 0;
+            ADC1_progressbar.Value = 0;
+            ADC2_progressbar.Value = 0;
+            ADC3_progressbar.Value = 0;
+            ADC4_progressbar.Value = 0;
+            ADC5_progressbar.Value = 0;
         }
 
  
